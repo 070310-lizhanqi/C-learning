@@ -1,0 +1,99 @@
+# ===== 编译产物 =====
+*.o
+*.obj
+*.lo
+*.slo
+*.a
+*.lib
+*.la
+*.lai
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+*.elf
+*.bin
+*.ilk
+*.pdb
+*.exp
+*.idb
+
+# ===== 构建目录 =====
+build/
+Build/
+out/
+bin/
+obj/
+Debug/
+Release/
+cmake-build-*/
+
+# ===== CMake =====
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+# 注意：只有 CMake 自动生成的 Makefile 才该忽略。手写的 Makefile 通常是
+# 要纳入版本控制的，所以这里默认不忽略；确实需要时再取消下面的注释。
+# Makefile
+# makefile
+
+# ===== 编译中间文件 =====
+*.i
+*.ii
+*.s
+*.su
+*.gcno
+*.gcda
+*.gcov
+*.d
+*.dSYM/
+core
+core.*
+
+# ===== IDE / 编辑器 =====
+# VS Code（保留 .vscode/settings.json 和 tasks.json 的团队共享配置，需自行调整）
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+# Visual Studio
+.vs/
+*.vcxproj.user
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+# CLion / JetBrains
+.idea/
+*.iml
+# Dev-C++ / Code::Blocks
+*.layout
+*.depend
+*.cbp
+# Xcode
+xcuserdata/
+*.xcuserstate
+
+# ===== 调试信息 =====
+*.stackdump
+vgcore.*
+
+# ===== 操作系统 =====
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+._*
+
+# ===== 其他 =====
+*.log
+*.tmp
+*.bak
+*.swp
+*~
