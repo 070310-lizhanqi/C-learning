@@ -1,0 +1,11 @@
+sizeof是运算符；运算实际占用内存
+char str[]={"Hello"} //实际占用h e l l o \0 一共六个内存大小
+sizeof(str)
+结果是6.
+strlen是库函数 运行遍历到\0停止
+strlen(str)
+结果是5
+
+
+64位中 char int 一个占用4个字节
+int */char * 占用8个字节
