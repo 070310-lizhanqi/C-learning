@@ -1,11 +1,39 @@
-sizeof是运算符；运算实际占用内存
-char str[]={"Hello"} //实际占用h e l l o \0 一共六个内存大小
-sizeof(str)
-结果是6.
-strlen是库函数 运行遍历到\0停止
-strlen(str)
-结果是5
+sizeof 是运算符，用来计算对象或类型在内存中所占的字节数，结果是 size_t。
+它在编译期求值，不会遍历字符串。
+打印时用 %lu     -->unsigned long long sizeof
 
+char str[] = "Hello";
+// 字符串实际存储：'H' 'e' 'l' 'l' 'o' '\0'
+// 共 6 个字节：5 个字符 + 1 个结束符 '\0'
 
-64位中 char int 一个占用4个字节
-int */char * 占用8个字节
+sizeof(str)  // 结果是 6
+
+strlen 是 C 标准库函数，用来求字符串长度，返回值是字符个数，不包括 '\0'。
+它会从字符串开头开始遍历，直到遇到 '\0' 为止。
+
+strlen(str)  // 结果是 5
+
+说明：
+- sizeof 统计的是“所占内存大小”
+- strlen 统计的是“有效字符长度”
+
+常见数据类型大小（单位：字节）
+
+类型		32 位	64 位 Windows	64 位 Linux
+char		1	1	1
+short		2	2	2
+int		4	4	4
+long		4	4	8
+long long	8	8	8
+float		4	4	4
+double		8	8	8
+long double	8	8	16
+指针 T*	4	8	8
+size_t		4	8	8
+ptrdiff_t	4	8	8
+_Bool / bool	1	1	1
+
+补充：
+- 在 64 位平台上，int 一般仍然是 4 字节
+- int*、char* 等指针通常是 8 字节
+- long 在 Windows 64 位下是 4 字节，而在 Linux 64 位下是 8 字节
