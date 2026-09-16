@@ -7,4 +7,5 @@ int main()
 	{
 		printf("%d ",*(p+i));
 	}
+	return 0;
 }
