@@ -4,7 +4,7 @@
     {
       "type": "shell",
       "label": "C: 编译当前文件",
-      "command": "gcc",
+      "command": "C:/msys64/ucrt64/bin/gcc.exe",
       "args": [
         "-fdiagnostics-color=always",
         "-g",
@@ -14,7 +14,10 @@
         "${fileDirname}/${fileBasenameNoExtension}.exe"
       ],
       "options": {
-        "cwd": "${fileDirname}"
+        "cwd": "${fileDirname}",
+        "env": {
+          "Path": "C:/msys64/ucrt64/bin;${env:Path}"
+        }
       },
       "problemMatcher": [
         "$gcc"

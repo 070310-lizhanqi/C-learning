@@ -1,7 +1,7 @@
 {
-  "C_Cpp_Runner.cCompilerPath": "gcc",
-  "C_Cpp_Runner.cppCompilerPath": "g++",
-  "C_Cpp_Runner.debuggerPath": "gdb",
+  "C_Cpp_Runner.cCompilerPath": "C:/msys64/ucrt64/bin/gcc.exe",
+  "C_Cpp_Runner.cppCompilerPath": "C:/msys64/ucrt64/bin/g++.exe",
+  "C_Cpp_Runner.debuggerPath": "C:/msys64/ucrt64/bin/gdb.exe",
   "C_Cpp_Runner.cStandard": "c17",
   "C_Cpp_Runner.cppStandard": "c++17",
   "C_Cpp_Runner.msvcBatchPath": "C:/Program Files/Microsoft Visual Studio/VR_NR/Community/VC/Auxiliary/Build/vcvarsall.bat",
@@ -57,5 +57,8 @@
   "C_Cpp_Runner.useLeakSanitizer": false,
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
-  "C_Cpp_Runner.msvcSecureNoWarnings": false
+  "C_Cpp_Runner.msvcSecureNoWarnings": false,
+  "terminal.integrated.env.windows": {
+    "Path": "C:\\msys64\\ucrt64\\bin;${env:Path}"
+  }
 }
