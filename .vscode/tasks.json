@@ -11,7 +11,9 @@
                 "-Wall",
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}.exe"
+                "${fileDirname}/${fileBasenameNoExtension}.exe",
+                "-finput-charset=UTF-8",
+                "-fexec-charset=GBK"
             ],
             "options": {
                 "cwd": "${fileDirname}",
@@ -31,7 +33,7 @@
                 "panel": "shared",
                 "clear": true
             },
-            "detail": "用 gcc 编译当前打开的 .c 文件，生成同名 .exe（快捷键 Ctrl+Shift+B）"
+            "detail": "用 gcc 编译当前打开的 .c 文件，生成同名 .exe(快捷键 Ctrl+Shift+B)"
         },
         {
             "type": "shell",
@@ -58,7 +60,9 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-finput-charset=UTF-8",
+                "-fexec-charset=GBK"
             ],
             "options": {
                 "cwd": "C:/msys64/ucrt64/bin"
