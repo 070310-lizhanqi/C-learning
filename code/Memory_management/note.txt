@@ -1,0 +1,31 @@
+内存管理:对内存进行管理
+1、指针：指向一块内存空间
+2、内存四区：全局区、代码段、栈区、堆区。
+3、动态内存分配：malloc / free
+    malloc 向堆区申请内存,如果失败返回NULL，成功返回正确地址。
+
+动态内存：存放在堆区的内存，手动分配，手动分配
+静态内存：存放在栈区的内存，自动分配，自动释放
+
+/*void test_1(int n)
+{
+     int age=18;   //静态内存
+     printf("stack age:%d\n",&age);
+     age=20;
+     printf("stack age:%d\n",&age);
+     int* page =  malloc(n * sizeof(int));//分配内存但不会初始化内存
+     if(page==NULL)//检测内存是否分配成功，不成功返回NULL
+     {
+        printf("内存分配失败");
+        return;
+     }
+     *page=18;
+     printf("heap page:%d\n",*page);
+     printf("heap page:%d\n",page);
+     *page=20;
+     printf("heap page:%d\n",*page);
+     printf("heap page:%d\n",page);//实验得出地址不变
+     free(page);//如果未释放内存，会产生内存泄漏   同时禁止重复释放
+}*/
+
+

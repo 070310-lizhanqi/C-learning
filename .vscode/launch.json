@@ -8,8 +8,9 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/HP-Li/Desktop/C-learning/code/First-level_pointer",
-      "program": "d:/HP-Li/Desktop/C-learning/code/First-level_pointer/build/Debug/outDebug.exe",
+      "cwd": "${fileDirname}",
+      "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+      "preLaunchTask": "C: 编译当前文件",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/msys64/ucrt64/bin/gdb.exe",
       "setupCommands": [
