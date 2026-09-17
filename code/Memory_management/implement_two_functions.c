@@ -20,7 +20,6 @@ char *my_strdup(const char *s)
     if(p==NULL) // 
     {
         return NULL;
-        printf("内存分配失败\n");
     }
     for(size_t i=0;i<=n;i++)//循环将字符串s的内容复制到新分配的内存空间p中，<=n是为了复制字符串结尾的\0
     {
