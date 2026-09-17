@@ -75,6 +75,58 @@
                 "isDefault": true
             },
             "detail": "调试器生成的任务。"
+        },
+        {
+            "type": "shell",
+            "label": "C: clang 编译当前文件(ASan)",
+            "command": "C:/msys64/clang64/bin/clang.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "-Wall",
+                "-fsanitize=address",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}_asan.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}",
+                "env": {
+                    "Path": "C:/msys64/clang64/bin;${env:Path}"
+                }
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "reveal": "silent",
+                "panel": "shared",
+                "clear": true
+            },
+            "detail": "用 clang + AddressSanitizer 编译，生成 xxx_asan.exe。注意 clang 不支持 -fexec-charset=GBK，中文按 UTF-8 输出"
+        },
+        {
+            "type": "shell",
+            "label": "C: clang 编译并运行(ASan)",
+            "command": "${fileDirname}/${fileBasenameNoExtension}_asan.exe",
+            "options": {
+                "cwd": "${fileDirname}",
+                "env": {
+                    "Path": "C:/msys64/clang64/bin;${env:Path}"
+                }
+            },
+            "dependsOn": "C: clang 编译当前文件(ASan)",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            },
+            "detail": "用 clang + ASan 编译并运行：越界读写、use-after-free、内存泄漏都会报出源码行号"
         }
     ]
 }
